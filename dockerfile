@@ -13,8 +13,8 @@ WORKDIR /app
 # package.json to install the packages from 
 # and yarn.lock for a package called chokidar 
 # which is used for hot reloading
-COPY package.json /app/package.json
-COPY yarn.lock /app/yarn.lock
+COPY package.json /package.json
+COPY yarn.lock /yarn.lock
 COPY . .
 # since we are using local files and not copying them to docker
 # add the container's node_modules folder to docker's $PATH

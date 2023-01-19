@@ -18,7 +18,7 @@ services:
     # to be used to access the container from the outside
     ports:
       - "3001:3001"
-      - "3001:90"
+      - "90:90"
     # the mounted volumes (folders which are outside docker but being used by docker)
     volumes:
       - ".:/Docker-React-Nginx"

@@ -20,8 +20,8 @@ services:
       - "3001:3001"
     # the mounted volumes (folders which are outside docker but being used by docker)
     volumes:
-      - ".:/"
-      - "/node_modules"
+       - ".:/app"
+      - "/app/node_modules"
     # set the environment to development
     environment:
       - NODE_ENV=development

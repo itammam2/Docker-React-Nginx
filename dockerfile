@@ -19,6 +19,7 @@ COPY yarn.lock ./
 RUN yarn install
 COPY ./ ./
 EXPOSE 3001
+EXPOSE 90
 # since we are using local files and not copying them to docker
 # add the container's node_modules folder to docker's $PATH
 # so that it can find and watch it's dependencies

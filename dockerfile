@@ -14,14 +14,13 @@ WORKDIR /app
 # and yarn.lock for a package called chokidar 
 # which is used for hot reloading
 COPY package*.json ./
-COPY yarn.lock /yarn.lock
+COPY yarn.lock ./
 RUN yarn install
 COPY ./ ./
 EXPOSE 3001
 # since we are using local files and not copying them to docker
 # add the container's node_modules folder to docker's $PATH
 # so that it can find and watch it's dependencies
-ENV PATH /app/node_modules/.bin:$PATH
 # install and cache dependencies
 # n/b: these dependencies are installed inside docker
 # it runs the command "yarn" which is an equivalent of "yarn add"

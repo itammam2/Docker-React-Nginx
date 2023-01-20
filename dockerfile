@@ -8,7 +8,7 @@ FROM node:alpine
 # set working directory
 # this is the working folder in the container 
 # from which the app will be running from
-WORKDIR /app
+WORKDIR /apps
 # copy package.json and yarn.lock
 # package.json to install the packages from 
 # and yarn.lock for a package called chokidar 

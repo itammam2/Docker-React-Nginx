@@ -4,11 +4,11 @@
 # why alpine? Alpine Linux is a security-oriented, lightweight 
 # Linux distribution. how small? how about 5Mb?
 # in comparison ubuntu 18.04 is about 1.8Gb
-FROM node:alpine
+FROM node:14
 # set working directory
 # this is the working folder in the container 
 # from which the app will be running from
-WORKDIR /apps
+WORKDIR /app
 # copy package.json and yarn.lock
 # package.json to install the packages from 
 # and yarn.lock for a package called chokidar 

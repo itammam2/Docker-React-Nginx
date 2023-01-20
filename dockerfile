@@ -13,7 +13,7 @@ WORKDIR /app
 # package.json to install the packages from 
 # and yarn.lock for a package called chokidar 
 # which is used for hot reloading
-RUN yarn init
+
 COPY package*.json ./
 COPY yarn.lock ./
 RUN yarn install
